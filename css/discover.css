@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #101014;
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+.discover .nav-bar{
+
+    display: inline-flex;
+
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: #878789;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
