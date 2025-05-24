@@ -16,7 +16,7 @@ body {
 .login-box {
     background-color: #1a1a1a;
     border: 1px solid #444;
-    width: 400px;
+    width: 550px;
     border-radius: 8px;
     padding: 30px;
     color: #fff;
@@ -108,3 +108,100 @@ form {
 
 .links a:hover {
     text-decoration: underline; }
+
+.button-container {
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+.button-row,
+.extra-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.btn {
+    width: 100px;
+    height: 60px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Estilos por plataforma */
+.ps {
+    background-color: #003087;
+}
+
+.xbox {
+    background-color: #107C10;
+}
+
+.nintendo {
+    background-color: #E60012;
+    font-weight: bold;
+}
+
+.google {
+    background-color: white;
+    color: #333;
+}
+
+.steam {
+    background-color: #1b2838;
+}
+
+.disney {
+    background-color: white;
+    color: black;
+    font-family: 'Comic Sans MS';
+}
+
+.apple {
+    background-color: white;
+    color: black;
+}
+
+.facebook {
+    background-color: #1877F2;
+}
+
+.lego {
+    background-color: #FFD500;
+    color: red;
+    font-weight: bold;
+}
+
+/* Animación de ocultar/mostrar */
+.extra-buttons {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.extra-buttons.show {
+    max-height: 100px;
+    opacity: 1;
+}
+
+#toggleBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
