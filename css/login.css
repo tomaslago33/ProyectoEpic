@@ -133,8 +133,6 @@ form {
     cursor: pointer;
     transition: transform 0.3s, opacity 0.3s;
 }
-
-/* Estilos por plataforma */
 .ps {
     background-color: #003087;
 }
@@ -178,7 +176,7 @@ form {
     font-weight: bold;
 }
 
-/* Animación de ocultar/mostrar */
+
 .extra-buttons {
     max-height: 0;
     opacity: 0;
@@ -192,7 +190,9 @@ form {
 }
 
 #toggleBtn {
-    margin-top: 10px;
+    display: block;
+    margin: 10px auto 0 auto;
+    /* centrado horizontal y separación arriba */
     padding: 10px 20px;
     background-color: #444;
     color: white;
@@ -200,7 +200,6 @@ form {
     border-radius: 5px;
     cursor: pointer;
 }
-
 .btn:hover {
     filter: brightness(1.2);
     transform: scale(1.05);
