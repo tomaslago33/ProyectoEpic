@@ -49,3 +49,36 @@ body {
   color: white;
   font-weight: bold;
 }
+
+.categoria-1, .categoria-2, .categoria-3, .categoria-4{
+width: 16rem;
+background-color: #222;
+height: 14rem;
+margin: auto;
+display:flex; justify-content: center; align-items: center;
+flex-direction: column;
+border-radius: 10px;
+}
+
+.categoria-1 img,.categoria-2 img,.categoria-3 img,.categoria-4 img{ 
+width: 220px;
+height: 140px;
+border-radius: 10px
+;}
+
+.section-popularGames{
+    width: 70rem;
+    margin: auto;
+}
+
+.section-popularGames h2{
+    font-size: 32px;
+    margin-left: 10px;
+}
+
+.section-popularGames-categorias{
+display: flex;
+flex-direction: row;
+width: 70rem;
+margin: auto;
+}
