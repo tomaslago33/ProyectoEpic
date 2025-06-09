@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    width: 550px;
+    border-radius: 8px;
+    padding: 30px;
+    color: #fff;
+}
+
+.login-box img.logo {
+    display: block;
+    margin: 0 auto 20px auto;
+    height: 40px;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.social-button img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.social-button:hover {
+    background-color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 4px;
+    color: white;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #0074e4;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #005bb5;
+}
+
+.links {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.links a {
+    color: #0074e4;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline; }
+
+.button-container {
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #aaa;
+    margin: 1rem 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #444;
+}
+
+.divider:not(:empty)::before {
+    margin-right: .75em;
+}
+
+.divider:not(:empty)::after {
+    margin-left: .75em;
+}
+
+.button-row,
+.extra-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 10px 0;
+}
+
+.btn {
+    width: 100px;
+    height: 60px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+}
+.ps {
+    background-color: #003087;
+}
+
+.xbox {
+    background-color: #107C10;
+}
+
+.nintendo {
+    background-color: #E60012;
+    font-weight: bold;
+}
+
+.google {
+    background-color: white;
+    color: #333;
+}
+
+.steam {
+    background-color: #1b2838;
+}
+
+.disney {
+    background-color: white;
+    color: black;
+    font-family: 'Comic Sans MS';
+}
+
+.apple {
+    background-color: white;
+    color: black;
+}
+
+.facebook {
+    background-color: #1877F2;
+}
+
+.lego {
+    background-color: #FFD500;
+    color: red;
+    font-weight: bold;
+}
+
+
+.extra-buttons {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.extra-buttons.show {
+    max-height: 100px;
+    opacity: 1;
+}
+
+#toggleBtn {
+    display: block;
+    margin: 10px auto 0 auto;
+    /* centrado horizontal y separación arriba */
+    padding: 10px 20px;
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+    filter: brightness(1.2);
+    transform: scale(1.05);
+}
