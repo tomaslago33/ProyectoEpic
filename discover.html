@@ -36,24 +36,21 @@
     </section>-->
 
 
-    <div class="carousel">
-        <div class="slides">
-            <div class="slide active" style="background-image: url('img/discover/codbo6.jpeg');">
-                <div class="info">Juego 1</div>
+    <div class="epic-container">
+        <div class="background" id="background"></div>
+        <div class="overlay">
+            <div class="info">
+                <h1 id="title">Título del juego</h1>
+                <p id="description">Descripción del juego aquí.</p>
+                <button id="verMas">Ver más</button>
             </div>
-            <div class="slide" style="background-image: url('img/discover/codbo6.jpeg');">
-                <div class="info">Juego 2</div>
+            <div class="game-list" id="gameList">
+                <!-- Generado dinámicamente -->
             </div>
-            <div class="slide" style="background-image: url('img/discover/sonic.jpeg');">
-                <div class="info">Juego 3</div>
-            </div>
-        </div>
-        <div class="controls">
-            <button id="prev">&#10094;</button>
-            <button id="next">&#10095;</button>
         </div>
     </div>
-    
+
+    <img src="img/discover/codbo6.jpeg" alt="">
 
     <script src="js/discover.js"></script>
 
