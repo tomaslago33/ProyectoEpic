@@ -5,15 +5,21 @@ body {
   font-family: sans-serif;
 }
 
+main{
+  padding: 0;
+  max-width: 75rem;
+  margin: auto;
+}
+
 .section-menu {
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem 0;
   gap: 2rem;
   background-color: #111;
-  width: 75rem;
+  width: 100%;
+
   margin: auto;
-  margin-bottom: 80px;
 }
 
 .section-menu-input {
@@ -177,10 +183,17 @@ gap: 20px;
   border: 0;
   border-radius: 5px;
   margin: 10px;
+  color: white;
 }
 
 .filtro-cantidad-restablecer{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.filtro-cantidad-restablecer-restablecer{
+color: #4af;
+font-size: 13px;
+padding-top: 5px;
 }
