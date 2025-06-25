@@ -1,57 +1,36 @@
-const games = [
-    {
-        title: "Call of Duty: Black Ops 6",
-        description: "Acción intensa en la nueva entrega de COD.",
-        image: "img/discover/codbo6.jpeg"
-    },
-    {
-        title: "Juego 1",
-        description: "Un juego épico de aventuras.",
-        image: "img/discover/1.jpg"
-    },
-    {
-        title: "Sonic",
-        description: "Velocidad y acción con el erizo azul.",
-        image: "img/discover/sonic.jpeg"
-    }
-];
-let currentIndex = 0;
+const slides = document.querySelectorAll(".slide");
+const items = document.querySelectorAll(".item");
+let current = 0;
+let interval;
 
-const background = document.getElementById("background");
-const title = document.getElementById("title");
-const description = document.getElementById("description");
-const gameList = document.getElementById("gameList");
+function showSlide(index) {
+    slides[current].classList.remove("active");
+    items[current].classList.remove("active");
 
-function updateSlide(index) {
-    const game = games[index];
-    background.style.backgroundImage = `url('${game.image}')`;
-    title.textContent = game.title;
-    description.textContent = game.description;
-
-    document.querySelectorAll('.game-item').forEach((item, i) => {
-        item.classList.toggle('active', i === index);
-    });
-
-    currentIndex = index;
+    current = index;
+    slides[current].classList.add("active");
+    items[current].classList.add("active");
 }
 
-function createGameList() {
-    games.forEach((game, index) => {
-        const div = document.createElement("div");
-        div.className = "game-item";
-        div.textContent = game.title;
-        div.addEventListener("click", () => {
-            updateSlide(index);
-        });
-        gameList.appendChild(div);
-    });
+function startAutoSlide() {
+    interval = setInterval(() => {
+        let next = (current + 1) % slides.length;
+        showSlide(next);
+    }, 5000);
 }
 
-createGameList();
-updateSlide(0);
+function resetAutoSlide(index) {
+    clearInterval(interval);
+    showSlide(index);
+    startAutoSlide();
+}
 
-// Cambio automático
-setInterval(() => {
-    let nextIndex = (currentIndex + 1) % games.length;
-    updateSlide(nextIndex);
-}, 7000); // cada 7 segundos
+showSlide(0);
+startAutoSlide();
+
+items.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+        const index = parseInt(item.getAttribute("data-index"));
+        resetAutoSlide(index);
+    });
+});
