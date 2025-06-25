@@ -1,58 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/discover.css">
-    <link rel="icon" href="img/epic_games_favicon_2.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Epic Games Store | Download & Play PC Games, Mods, DLC & More - Epic Games </title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Descubrir</title>
+    <link rel="stylesheet" href="css/discover.css" />
 </head>
+
 <body>
-    
-    <!--
-    <section class="discover">
-        <div class="main-content">
-            <div class="sub-header">
-                
-                <div class="subNav-bar">
-                    <div class="search-box">
-                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                        <input type="search" class="search-input" placeholder="Search store" >
-                    </div>
-                    <nav class="nav-bar">
-                        <ul class="nav-menu">
-                            <li><a href="#" class="active">Discover </a></li>
-                            <li><a href="#">Browse</a></li>
-                            <li><a href="#">News</a></li>
-                        </ul>
-                    </nav>
-    
+
+    <div class="container">
+        <div class="carousel">
+            <div class="slides">
+                <img src="1.jpg" class="slide active" alt="Juego 1">
+                <img src="sonic.jpeg" class="slide" alt="Juego 2">
+                <img src="codbo6.jpeg" class="slide" alt="Juego 3">
+            </div>
+        </div>
+
+        <div class="side-list">
+            <div class="item" data-index="0">
+                <img src="1.jpg" alt="Juego 1">
+                <div class="text-container">
+                    <p>Need for sleep</p>
+                    <div class="progress-bar"></div>
                 </div>
             </div>
 
-        </div>
-
-    </section>-->
-
-
-    <div class="epic-container">
-        <div class="background" id="background"></div>
-        <div class="overlay">
-            <div class="info">
-                <h1 id="title">Título del juego</h1>
-                <p id="description">Descripción del juego aquí.</p>
-                <button id="verMas">Ver más</button>
+            <div class="item" data-index="1">
+                <img src="sonic.jpeg" alt="Juego 1">
+                <div class="text-container">
+                    <p>Shadow Generation</p>
+                    <div class="progress-bar"></div>
+                </div>
             </div>
-            <div class="game-list" id="gameList">
-                <!-- Generado dinámicamente -->
+
+            <div class="item" data-index="2">
+                <img src="codbo6.jpeg" alt="Juego 1">
+                <div class="text-container">
+                    <p>Counter Strike</p>
+                    <div class="progress-bar"></div>
+                </div>
             </div>
         </div>
     </div>
 
-    <img src="img/discover/codbo6.jpeg" alt="">
-
     <script src="js/discover.js"></script>
-
 </body>
+
 </html>
