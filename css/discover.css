@@ -7,14 +7,22 @@ body {
 }
 
 .container {
+    max-width: 1200px;
+    height: 550px;
+    margin: 40px auto;
     display: flex;
-    height: 80vh;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .carousel {
     flex: 3;
     position: relative;
     overflow: hidden;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .slides {
@@ -45,8 +53,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
-    gap: 15px;
+    padding: 10px;
+    gap: 10px;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .item {
