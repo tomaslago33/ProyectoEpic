@@ -49,3 +49,28 @@ btnLeft.addEventListener('click', () => {
 btnRight.addEventListener('click', () => {
     carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
 });
+
+
+const carousel = document.getElementById('carousel');
+const btnNext = document.getElementById('next');
+const btnPrev = document.getElementById('prev');
+
+const cardWidth = carousel.querySelector('.game-card').offsetWidth + 20; // ancho + gap
+const itemsPerPage = 5;
+let currentPage = 0;
+
+btnNext.addEventListener('click', () => {
+    const maxPage = Math.floor(carousel.children.length / itemsPerPage) - 1;
+    if (currentPage < maxPage) currentPage++;
+    updateCarousel();
+});
+
+btnPrev.addEventListener('click', () => {
+    if (currentPage > 0) currentPage--;
+    updateCarousel();
+});
+
+function updateCarousel() {
+    const scrollX = currentPage * (cardWidth * itemsPerPage);
+    carousel.style.transform = `translateX(-${scrollX}px)`;
+}

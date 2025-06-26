@@ -6,7 +6,7 @@ body {
     color: white;
 }
 
-.container {
+.container1 {
     max-width: 1200px;
     height: 550px;
     margin: 40px auto;
@@ -16,7 +16,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-.carousel {
+.carousel1 {
     flex: 3;
     position: relative;
     overflow: hidden;
@@ -138,63 +138,62 @@ body {
 }
 
 
-.carousel-section {
+.carousel2-section {
     padding: 20px;
-    max-width: 100%;
-    overflow: hidden;
+    max-width: 1280px;
+    margin: auto;
 }
 
-.carousel-section h2 {
+.carousel2-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 15px;
+}
+
+.carousel2-header h2 {
     font-size: 24px;
 }
 
-.carousel-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-
-.carousel {
-    display: flex;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    gap: 15px;
-    padding: 10px 0;
-    scrollbar-width: none;
-}
-
-.carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.carousel img {
-    height: 250px;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.carousel img:hover {
-    transform: scale(1.05);
-}
-
-.nav-btn {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+.nav-buttons button {
+    background: none;
     border: none;
-    padding: 10px;
-    font-size: 30px;
+    color: white;
+    font-size: 28px;
     cursor: pointer;
-    z-index: 2;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    margin-left: 10px;
 }
 
-.nav-btn.left {
-    left: 0;
+.carousel2 {
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
 }
 
-.nav-btn.right {
-    right: 0;
+.game-card {
+    min-width: calc(20% - 16px);
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.title {
+    padding: 10px 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.price {
+    padding: 0 10px 10px;
+    font-size: 14px;
+    color: #ccc;
 }
