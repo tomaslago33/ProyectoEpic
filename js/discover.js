@@ -34,3 +34,18 @@ items.forEach(item => {
         resetAutoSlide(index);
     });
 });
+
+
+const carousel = document.getElementById('carousel');
+const btnLeft = document.querySelector('.nav-btn.left');
+const btnRight = document.querySelector('.nav-btn.right');
+
+const scrollAmount = 300; 
+
+btnLeft.addEventListener('click', () => {
+    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+
+btnRight.addEventListener('click', () => {
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+});
