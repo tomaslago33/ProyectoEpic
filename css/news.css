@@ -6,7 +6,7 @@ body {
 }
 
 main{
-margin: 0 13rem;
+margin: 0 22vh;
 background-color: #111;
 color: #fff;
 
@@ -20,10 +20,11 @@ color: #fff;
 .div-principal{
     border-bottom: 1px #666 solid ;
     padding: 1rem;
+    min-width: 500px
 }
 
 .imagen-principal{
-    width: 76rem;
+    width: 100%;
 }
 
 
@@ -35,7 +36,8 @@ border-right: 0;
 border-top: 0;
 display: flex;
 flex-direction: row;
-color: #eee;}
+color: #eee;
+min-width: 500px}
 
 .div-principal-dias, .diviciones-noticias-contenido-dias{
     color: #888;
