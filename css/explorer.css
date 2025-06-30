@@ -252,3 +252,25 @@ gap: 20px;
   padding-top: 5px;
   text-decoration: none;
 }
+.filter-content{
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: #111;
+  color: white;
+  padding: 10px;
+  border-top: none;
+  width: 100%;
+}
+
+.dropdown-content p {
+  margin: 0;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.dropdown-content p:hover {
+  background-color: #28282C;
+}
