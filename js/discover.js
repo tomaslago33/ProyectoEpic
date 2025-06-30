@@ -36,41 +36,56 @@ items.forEach(item => {
 });
 
 
-const carousel = document.getElementById('carousel');
-const btnLeft = document.querySelector('.nav-btn.left');
-const btnRight = document.querySelector('.nav-btn.right');
-
-const scrollAmount = 300; 
-
-btnLeft.addEventListener('click', () => {
-    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-});
-
-btnRight.addEventListener('click', () => {
-    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-});
 
 
-const carousel = document.getElementById('carousel');
-const btnNext = document.getElementById('next');
-const btnPrev = document.getElementById('prev');
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.getElementById('carousel2');
+    const btnNext = document.getElementById('next');
+    const btnPrev = document.getElementById('prev');
 
-const cardWidth = carousel.querySelector('.game-card').offsetWidth + 20; // ancho + gap
-const itemsPerPage = 5;
-let currentPage = 0;
+    const itemsPerPage = 5;
+    let currentPage = 0;
 
-btnNext.addEventListener('click', () => {
-    const maxPage = Math.floor(carousel.children.length / itemsPerPage) - 1;
-    if (currentPage < maxPage) currentPage++;
+    function getCardWidth() {
+        const card = carousel.querySelector('.game-card2');
+        const style = window.getComputedStyle(card);
+        const gap = 20;
+        return card.offsetWidth + gap;
+    }
+
+    function updateCarousel() {
+        const cardWidth = getCardWidth();
+        const scrollX = currentPage * (cardWidth * itemsPerPage);
+        carousel.style.transform = `translateX(-${scrollX}px)`;
+
+    }
+
+    btnNext.addEventListener('click', () => {
+        const maxPage = Math.ceil(carousel.children.length / itemsPerPage) - 1;
+        if (currentPage < maxPage) {
+            currentPage++;
+            updateCarousel();
+        }
+    });
+
+    btnPrev.addEventListener('click', () => {
+        if (currentPage > 0) {
+            currentPage--;
+            updateCarousel();
+        }
+    });
+
+
+    // Establecer ancho total del carrusel
+    function setCarouselWidth() {
+        const cardWidth = getCardWidth();
+        const totalCards = carousel.children.length;
+    }
+
+    setCarouselWidth();
+    updateCarousel();
+
+
+    // Inicializar correctamente
     updateCarousel();
 });
-
-btnPrev.addEventListener('click', () => {
-    if (currentPage > 0) currentPage--;
-    updateCarousel();
-});
-
-function updateCarousel() {
-    const scrollX = currentPage * (cardWidth * itemsPerPage);
-    carousel.style.transform = `translateX(-${scrollX}px)`;
-}

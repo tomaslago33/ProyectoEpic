@@ -1,3 +1,5 @@
+/* discover.css */
+
 body {
     margin: 0;
     padding: 0;
@@ -137,25 +139,24 @@ body {
     z-index: 1;
 }
 
-
-.carousel2-section {
+.carousel-section2 {
     padding: 20px;
     max-width: 1280px;
     margin: auto;
 }
 
-.carousel2-header {
+.carousel-header2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
 }
 
-.carousel2-header h2 {
+.carousel-header2 h2 {
     font-size: 24px;
 }
 
-.nav-buttons button {
+.nav-buttons2 button {
     background: none;
     border: none;
     color: white;
@@ -164,23 +165,43 @@ body {
     margin-left: 10px;
 }
 
+
+
 .carousel2 {
     display: flex;
+    flex-wrap: nowrap;
     overflow: hidden;
     transition: transform 0.5s ease-in-out;
     gap: 20px;
+    width: fit-content;
+    /* <- Forzar que el ancho crezca según su contenido */
 }
 
-.game-card {
-    min-width: calc(20% - 16px);
+.carousel-section2 {
+    overflow-x: hidden;
+}
+
+.game-card2 {
+    flex: 0 0 calc(20% - 16px);
+    /* <-- NO usar min-width */
     background-color: #1a1a1a;
     border-radius: 10px;
     overflow: hidden;
     text-align: left;
-    flex-shrink: 0;
+}   
+
+.game-card2 {
+    flex: 0 0 calc(20% - 16px);
+    /* 5 por fila, sin autoajuste */
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    height: auto;
+    /* importante */
 }
 
-.game-card img {
+.game-card2 img {
     width: 100%;
     height: auto;
     display: block;
