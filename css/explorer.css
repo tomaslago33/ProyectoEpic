@@ -22,14 +22,30 @@ main{
   margin: auto;
 }
 
-.section-menu-input {
+.search-input{
   background-color: #1c1c1c;
-  border: none;
   border-radius: 2rem;
-  padding: 0.5rem 1.5rem;
+  padding: .7rem 1.5rem;
+  color: white;
+
+}
+
+.section-menu-input {
+  background: none;
+  border: none;
   color: white;
   font-size: 1rem;
-  width: 250px;
+  width: 12rem;
+}
+
+
+.section-menu-input:focus {
+  outline: none;
+}
+
+.search-input:hover{
+  background-color: #404044;
+
 }
 
 .section-menu-input::placeholder {
@@ -187,6 +203,7 @@ gap: 20px;
   border-right: 0;
   align-content: center;
   color: #888;
+  cursor: pointer;
 }
 
 
@@ -195,14 +212,28 @@ gap: 20px;
   flex-direction: row;
 }
 
-.input-filtro input{
-  width: 200px;
-  height: 34px;
-  background-color: #333;
-  border: 0;
+.input-filtro{
+  width: 14.5rem;
+  height: 2.5rem;
+  background-color: #1c1c1c;
   border-radius: 5px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.input-filtro input{
+  background: none;
+  border: 0;
   margin: 10px;
   color: white;
+}
+
+.input-filtro:hover{
+  background-color: #28282C;
+}
+
+.input-filtro input:focus{
+  outline: none;
 }
 
 .filtro-cantidad-restablecer{
@@ -211,8 +242,13 @@ gap: 20px;
   justify-content: space-between;
 }
 
+.filter1{
+  font-weight: 600;
+}
+
 .filtro-cantidad-restablecer-restablecer{
-color: #4af;
-font-size: 13px;
-padding-top: 5px;
+  color: #4af;
+  font-size: 13px;
+  padding-top: 5px;
+  text-decoration: none;
 }

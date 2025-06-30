@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/icon_favicon.png" type="image/png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Epic Games Store | Download & Play PC Games, Mods, DLC & More | Epic Games Store </title>
     <link rel="stylesheet" href="css/explorer.css">
 </head>
 <body>
 <main>
     <section class="section-menu">
-        <input  class="section-menu-input" type="text" placeholder="Buscar en la tienda">
+        <div class="search-input">
+            <i class='bx  bx-search'  ></i> 
+            <input  class="section-menu-input" type="text" placeholder="Buscar en la tienda">
+        </div>
         <div class="section-menu-href">
             <a href="">Descubrir</a>
             <a href="">Explorar</a>
@@ -158,30 +163,36 @@
         </div>
         <div class="filtros">
             <div class="filtro-cantidad-restablecer">
-                <p>Filtros(1)</p> <p class="filtro-cantidad-restablecer-restablecer">restablecer</p>
+                <p class="filter1">Filtros(1)</p> 
+                <a href="#" class="filtro-cantidad-restablecer-restablecer" >restablecer</a>
             </div>
             <div class="input-filtro">
+                <i class='bx  bx-search'  ></i> 
                 <input type="text" placeholder="Palabras clave">
             </div>
-            <div class="filtro-1">
+            <div class="filtro-1" onclick="toggleDropdown(this)">
                 Eventos
             </div>
-            <div class="filtro-1">
+            <div class="dropdown-content">
+                <p>Opción 1</p>
+                <p>Opción 2</p>
+            </div>
+            <div class="filtro-1" onclick="toggleDropdown(this)">
                 Precio
             </div>
-            <div class="filtro-1">
+            <div class="filtro-1" onclick="toggleDropdown(this)">
                 Género
             </div>
-            <div class="filtro-1">
+            <div class="filtro-1" onclick="toggleDropdown(this)">
                 Funciones
             </div>
-            <div class="filtro-1">
+            <div class="filtro-1" onclick="toggleDropdown(this)">
                 Tipos
             </div>
-            <div class="filtro-1">
+            <div class="filtro-1" onclick="toggleDropdown(this)">
                 Plataforma
             </div>
-            <div class="filtro-1">
+            <div class="filtro-1" onclick="toggleDropdown(this)">
                 Suscripciones
             </div>
         </div>
