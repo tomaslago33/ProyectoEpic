@@ -1,12 +1,13 @@
 .footer {
-    background-color: #1c1c1c;
-    color: #ccc;
-    padding: 40px 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 14px;
+  background-color: #1c1c1c;
+  color: #ccc;
+  padding: 60px 40px; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  width: 100%;
 }
 
-/* --- TOP: Logo + Redes --- */
+
 .footer-top-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -38,7 +39,6 @@
     transform: scale(1.1);
 }
 
-/* Separador */
 .footer-divider {
     border: none;
     height: 1px;
@@ -47,7 +47,6 @@
     max-width: 1200px;
 }
 
-/* --- Enlaces de columnas --- */
 .footer-links {
     display: flex;
     flex-wrap: wrap;
@@ -88,7 +87,7 @@
     color: #fff;
 }
 
-/* --- Texto legal --- */
+
 .footer-legal {
     max-width: 1200px;
     margin: 0 auto;
@@ -99,7 +98,6 @@
     padding-top: 20px;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .footer-top-content {
         flex-direction: column;
@@ -140,9 +138,63 @@
     border-color: #666;
 }
 
-/* Responsive: centrar en móviles */
+
 @media (max-width: 768px) {
     .footer-backtotop {
         text-align: center;
     }
 }   
+
+.footer-legal {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.5;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.footer-legal-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-legal-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.footer-backtotop button {
+    background-color: #333;
+    color: #ccc;
+    border: 1px solid #444;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.footer-backtotop button:hover {
+    background-color: #555;
+    color: #fff;
+    border-color: #666;
+}
+
+
+@media (max-width: 768px) {
+    .footer-legal-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-backtotop {
+        margin-top: 10px;
+        width: 100%;
+        text-align: left;
+    }
+}
