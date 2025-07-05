@@ -16,33 +16,66 @@
             <a href="">Noticias</a>
         </div>
     </section>
+
+        
+
     <section class="section-popularGames">
-        <h2>Géneros populares </h2>
-        <div class="section-popularGames-categorias">
-            <div class="categoria-1">
-                <img src="img/explorer/forza.jpeg" alt="">
-                <p>CARRERAS</p>
-            </div>
-            <div class="categoria-2">
-                <img src="img/explorer/plantaszombis.jpeg" alt="">
-                <p>CASUALES</p>
-            </div>
-            <div class="categoria-3">
-                <img src="img/explorer/fifa.jpg" alt="">
-                <p>DEPORTES</p>
-            </div>
-            <div class="categoria-4">
-                <img src="img/explorer/images.jpeg" alt="">
-                <p>DISPAROS</p>
+        <div class="titulo-popular">
+            <h2>Géneros populares </h2>
+            <div class="nav-buttons2">
+                <button class="carousel-btn left" onclick="scrollCarousel(-1)">‹</button>
+                <button class="carousel-btn right" onclick="scrollCarousel(1)">›</button>  
             </div>
         </div>
-    </section>
+        <section class="section-popularGames-categorias">
+  <div class="carousel-container">
+    <div class="carousel" id="carrusel">
+      <div class="categoria-1">
+        <img src="img/explorer/forza.jpeg" alt="">
+        <p>CARRERAS</p>
+      </div>
+      <div class="categoria-1">
+        <img src="img/explorer/plantaszombis.jpeg" alt="">
+        <p>CASUALES</p>
+      </div>
+      <div class="categoria-1">
+        <img src="img/explorer/fifa.jpg" alt="">
+        <p>DEPORTES</p>
+      </div>
+      <div class="categoria-1">
+        <img src="img/explorer/images.jpeg" alt="">
+        <p>DISPAROS</p>
+      </div>
+      <div class="categoria-1">
+        <img src="img/explorer/minecraft.jpeg" alt="">
+        <p>CREATIVOS</p>
+      </div>
+      <div class="categoria-1">
+        <img src="img/explorer/mk.jpeg" alt="">
+        <p>PELEAS</p>
+      </div>
+      <div class="categoria-1">
+        <img src="img/explorer/candy.jpeg" alt="">
+        <p>PUZZLES</p>
+      </div>
+      <div class="categoria-1">
+        <img src="img/explorer/gta.jpeg" alt="">
+        <p>ACCIÓN</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
     <section class="section-nuevos-lanzamientos">
         <div class="mostrar">
             <p>mostrar: Nuevo nuevos lanzamientos</p>
         </div>
     <div class="nuevos-lanzamientos-y-filtro">
-        <div class="nuevos-lanzamientos">
+        <div class="nuevos-lanzamientos" id="carousel2">
                 <div class="juego-1">
                     <img src="img/explorer/colossus.jpg" alt="">
                     <div class="texto-juegos-nuevos-lanzamientos">

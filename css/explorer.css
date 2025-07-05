@@ -197,3 +197,65 @@ color: #4af;
 font-size: 13px;
 padding-top: 5px;
 }
+
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1500px;
+
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  gap: 5px;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.categoria-1 {
+  flex: 0 0 24.7%; /* 4 elementos visibles */
+  
+  text-align: center;
+}
+
+.titulo-popular{
+  display: flex;
+  flex-direction:row;
+}
+
+.nav-buttons2{
+
+  width: 120px;
+  margin-left: 60%;
+  height: 60px;
+  padding: 10px;
+  color: white;
+}
+
+.carousel-btn{
+  background-color: rgb(61, 61, 63);
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  color: white;
+  border: white;
+}
+
+.carousel-btn.left {
+  left: 0;
+}
+
+.carousel-btn.right {
+  right: 0;
+}
+
+.section-nuevos-lanzamientos{
+  margin-top: 50px
+}
