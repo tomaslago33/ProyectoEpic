@@ -50,6 +50,7 @@ font-weight: 500;
 
 }
 
+<<<<<<< HEAD
 .navigation-buttons-descargar{
 background-color: #12a5ce;
 width: 110px;
@@ -58,3 +59,8 @@ height: 31px;}
 
 .navigation-menu-imagen-logo-1{width: 36px;}
 .navigation-menu-imagen-logo{width: 50px;}
+=======
+.navigation-buttons-descargar{background-color: #55c;
+color: #111;}
+
+>>>>>>> 98feef6dc281ffa41a6469f17077357a1c1369f0

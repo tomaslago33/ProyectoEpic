@@ -1,0 +1,220 @@
+/* discover.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #111;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.container1 {
+    max-width: 1200px;
+    height: 550px;
+    margin: 40px auto;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.carousel1 {
+    flex: 3;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: scale(1);
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.side-list {
+    flex: 1;
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.item:hover {
+    background: #2c2c2c;
+}
+
+.item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+.text-container {
+    flex: 1;
+    position: relative;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #1a1a1a;
+    transition: background 0.3s;
+}
+
+.item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #333;
+    z-index: 0;
+    transition: none;
+}
+
+.item.active::before {
+    animation: fillBackground 5s linear forwards;
+}
+
+@keyframes fillBackground {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.item img,
+.item p {
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-section2 {
+    padding: 20px;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.carousel-header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.carousel-header2 h2 {
+    font-size: 24px;
+}
+
+.nav-buttons2 button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+
+.carousel2 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+    width: fit-content;
+    /* <- Forzar que el ancho crezca según su contenido */
+}
+
+.carousel-section2 {
+    overflow-x: hidden;
+}
+
+.game-card2 {
+    flex: 0 0 calc(20% - 16px);
+    /* <-- NO usar min-width */
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+}   
+
+.game-card2 {
+    flex: 0 0 calc(20% - 16px);
+    /* 5 por fila, sin autoajuste */
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    height: auto;
+    /* importante */
+}
+
+.game-card2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.title {
+    padding: 10px 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.price {
+    padding: 0 10px 10px;
+    font-size: 14px;
+    color: #ccc;
+}
