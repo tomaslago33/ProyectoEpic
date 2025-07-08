@@ -181,7 +181,7 @@ body {
 .carousel2 {
     display: flex;
     flex-wrap: nowrap;
-    overflow: hidden;
+    
     transition: transform 0.5s ease-in-out;
     gap: 20px;
     width: fit-content;
@@ -189,7 +189,8 @@ body {
 }
 
 .carousel-section2 {
-    overflow-x: hidden;
+    overflow: hidden;
+    position: relative;
 }
 
 .game-card2 {
