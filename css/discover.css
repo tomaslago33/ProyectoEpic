@@ -218,3 +218,71 @@ body {
     font-size: 14px;
     color: #ccc;
 }
+
+
+main {
+    padding: 0;
+    max-width: 75rem;
+    margin: auto;
+}
+
+.section-menu {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 2rem;
+    background-color: #111;
+    width: 100%;
+
+    margin: auto;
+}
+
+.search-input {
+    background-color: #1c1c1c;
+    border-radius: 2rem;
+    padding: .7rem 1.5rem;
+    color: white;
+
+}
+
+.section-menu-input {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    width: 12rem;
+}
+
+
+.section-menu-input:focus {
+    outline: none;
+}
+
+.search-input:hover {
+    background-color: #404044;
+
+}
+
+.section-menu-input::placeholder {
+    color: #aaa;
+}
+
+.section-menu-href {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.section-menu-href a {
+    color: #aaa;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.section-menu-href a:hover {
+    color: white;
+}
+
+.section-menu-href a.active {
+    color: white;
+    font-weight: bold;
+}
