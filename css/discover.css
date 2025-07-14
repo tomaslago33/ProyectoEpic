@@ -242,7 +242,6 @@ body {
     transition: transform 0.5s ease-in-out;
     gap: 20px;
     width: fit-content;
-    /* <- Forzar que el ancho crezca según su contenido */
 }
 
 .carousel-section2 {
@@ -251,7 +250,6 @@ body {
 
 .game-card2 {
     flex: 0 0 calc(20% - 16px);
-    /* <-- NO usar min-width */
     background-color: #1a1a1a;
     border-radius: 10px;
     overflow: hidden;
@@ -260,13 +258,11 @@ body {
 
 .game-card2 {
     flex: 0 0 calc(20% - 16px);
-    /* 5 por fila, sin autoajuste */
     background-color: #1a1a1a;
     border-radius: 10px;
     overflow: hidden;
     text-align: left;
     height: auto;
-    /* importante */
 }
 
 .game-card2 img {
