@@ -225,12 +225,23 @@ body {
 }
 
 .nav-buttons2 button {
-    background: none;
+    background-color: #333;
     border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
     color: white;
-    font-size: 28px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 400;
     cursor: pointer;
     margin-left: 10px;
+}
+
+.nav-buttons2 button:hover{
+
+    background-color: #6e6e6e;
+
 }
 
 
@@ -238,7 +249,7 @@ body {
 .carousel2 {
     display: flex;
     flex-wrap: nowrap;
-    overflow: hidden;
+    
     transition: transform 0.5s ease-in-out;
     gap: 20px;
     width: fit-content;
@@ -246,22 +257,22 @@ body {
 }
 
 .carousel-section2 {
-    overflow-x: hidden;
+    overflow: hidden;
+    position: relative;
 }
 
 .game-card2 {
     flex: 0 0 calc(20% - 16px);
     /* <-- NO usar min-width */
-    background-color: #1a1a1a;
     border-radius: 10px;
     overflow: hidden;
     text-align: left;
+    cursor: pointer;
 }   
 
 .game-card2 {
     flex: 0 0 calc(20% - 16px);
     /* 5 por fila, sin autoajuste */
-    background-color: #1a1a1a;
     border-radius: 10px;
     overflow: hidden;
     text-align: left;
@@ -275,6 +286,10 @@ body {
     display: block;
 }
 
+.game-card2 img:hover{
+    filter: contrast(0.9);
+}
+
 .title {
     padding: 10px 10px 0;
     font-size: 16px;
@@ -285,4 +300,51 @@ body {
     padding: 0 10px 10px;
     font-size: 14px;
     color: #ccc;
+}
+.texto-juegos-nuevos-lanzamientos{
+    margin-top: .5rem;
+}
+
+.nl-juego-base{
+  font-size: 15px;
+  color: #999;
+  margin: 2px;
+}
+
+.nl-titulo{
+  font-size: 18px;
+  color: #fff;
+  margin: 2px;
+}
+
+.nl-donde-esta{
+  font-size: 13px;
+  background-color: #444;
+  color: #fff;
+  width: 80px;
+  height: 18px;
+  text-align: center;
+  padding: 2px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.precio-juegos-nuevos-lanzamientos{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.nl-descuento{
+  width: 50px;
+  height: 20px;
+  background-color: #4af;
+  border-radius: 30px;
+  text-align: center;
+  color: #111;
+  font-size: 15px;
+}
+
+.nl-precio-anterior{
+  color: #aaa;
 }
