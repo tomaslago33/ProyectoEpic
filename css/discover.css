@@ -1,0 +1,350 @@
+/* discover.css */
+
+
+main {
+    padding: 0;
+    max-width: 75rem;
+    margin: auto;
+}
+
+.section-menu {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 2rem;
+    background-color: #111;
+    width: 100%;
+
+    margin: auto;
+}
+
+.search-input {
+    background-color: #1c1c1c;
+    border-radius: 2rem;
+    padding: .7rem 1.5rem;
+    color: white;
+
+}
+
+.section-menu-input {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    width: 12rem;
+}
+
+
+.section-menu-input:focus {
+    outline: none;
+}
+
+.search-input:hover {
+    background-color: #404044;
+
+}
+
+.section-menu-input::placeholder {
+    color: #aaa;
+}
+
+.section-menu-href {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.section-menu-href a {
+    color: #aaa;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.section-menu-href a:hover {
+    color: white;
+}
+
+.section-menu-href a.active {
+    color: white;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #111;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.container1 {
+    max-width: 1200px;
+    height: 550px;
+    margin: 40px auto;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.carousel1 {
+    flex: 3;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: scale(1);
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.side-list {
+    flex: 1;
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.item:hover {
+    background: #2c2c2c;
+}
+
+.item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+.text-container {
+    flex: 1;
+    position: relative;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #1a1a1a;
+    transition: background 0.3s;
+}
+
+.item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #333;
+    z-index: 0;
+    transition: none;
+}
+
+.item.active::before {
+    animation: fillBackground 5s linear forwards;
+}
+
+@keyframes fillBackground {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.item img,
+.item p {
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-section2 {
+    padding: 20px;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.carousel-header2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.carousel-header2 h2 {
+    font-size: 24px;
+}
+
+.nav-buttons2 button {
+    background-color: #333;
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.nav-buttons2 button:hover{
+
+    background-color: #6e6e6e;
+
+}
+
+
+
+.carousel2 {
+    display: flex;
+    flex-wrap: nowrap;
+    
+    transition: transform 0.5s ease-in-out;
+    gap: 20px;
+    width: fit-content;
+    /* <- Forzar que el ancho crezca según su contenido */
+}
+
+.carousel-section2 {
+    overflow: hidden;
+    position: relative;
+}
+
+.game-card2 {
+    flex: 0 0 calc(20% - 16px);
+    /* <-- NO usar min-width */
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    cursor: pointer;
+}   
+
+.game-card2 {
+    flex: 0 0 calc(20% - 16px);
+    /* 5 por fila, sin autoajuste */
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left;
+    height: auto;
+    /* importante */
+}
+
+.game-card2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.game-card2 img:hover{
+    filter: contrast(0.9);
+}
+
+.title {
+    padding: 10px 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.price {
+    padding: 0 10px 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+.texto-juegos-nuevos-lanzamientos{
+    margin-top: .5rem;
+}
+
+.nl-juego-base{
+  font-size: 15px;
+  color: #999;
+  margin: 2px;
+}
+
+.nl-titulo{
+  font-size: 18px;
+  color: #fff;
+  margin: 2px;
+}
+
+.nl-donde-esta{
+  font-size: 13px;
+  background-color: #444;
+  color: #fff;
+  width: 80px;
+  height: 18px;
+  text-align: center;
+  padding: 2px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.precio-juegos-nuevos-lanzamientos{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.nl-descuento{
+  width: 50px;
+  height: 20px;
+  background-color: #4af;
+  border-radius: 30px;
+  text-align: center;
+  color: #111;
+  font-size: 15px;
+}
+
+.nl-precio-anterior{
+  color: #aaa;
+}
