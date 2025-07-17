@@ -10,19 +10,58 @@
 <body>
     <nav class="navigation">
         <div class="navigation-menu">
-            <img class="navigation-menu-imagen-logo-1" src="img/Logoepic.png" alt="">
+            <div class="dropdown">
+            
+                <button class="button-epic" onclick="toggleMenu()"> <img class="navigation-menu-imagen-logo-1" src="img/Logoepic.png" alt=""> </button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Fortnite</a>
+                    <a href="#">Rocket League</a>
+                    <a href="#">Fall Guys</a>
+                    <div class="sesion-2">
+                        <a href="#">Epic Games Store</a>
+                        <a href="#">Fab</a>
+                        <a href="#">Skechtfab</a>
+                        <a href="#">Artstation</a>
+                    </div>
+                    <div class="sesion-3">
+
+                    </div>
+                </div>
+                
+        </div>
             <img class="navigation-menu-imagen-logo" src="img/Logostore.png" alt="">
             <p>Asistencia</p>
             <p>Distribuir</p>
-
         </div>
         <div class="navigation-buttons">
             <img  class="navigation-buttons-imagen-mundo" src="img/Logomundo.png" alt="">
-            <button class="navigation-buttons-iniciarSesion">Iniciar sesión</button>
+            <button class="navigation-buttons-iniciarSesion"><a  href="login.html"> Iniciar sesión </a> </button>
             <button class="navigation-buttons-descargar">Descargar</button>
     
         </div>
     </nav>
     
+
+
+<script>
+function toggleMenu() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Cerrar el menú si se hace clic afuera
+window.onclick = function(event) {
+  if (!event.target.matches('button')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
 </body>
 </html>
